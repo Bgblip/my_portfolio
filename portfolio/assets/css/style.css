@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: aliceblue;
+  background-color: rgb(0, 0, 0);
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding: var(--scroll-padding, 5rem);
+}
+.menu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 6.25rem;
+  position: fixed;
+  z-index: 999;
+}
+.menu a {
+  color: rgb(127, 129, 136);
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-weight: 400;
+}
+.dynamic-island {
+  background-color: rgb(0, 0, 0);
+  width: 9.375rem;
+  height: 2.813rem;
+  margin: auto;
+  margin-top: 0.625rem;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.938rem;
+  position: relative;
+  border-radius:1.875rem;
+  border: 1px solid rgb(127, 129, 136);
+}
+.dynamic-island ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  cursor: pointer;
+  opacity: 0;
+  /* display: none; */
+}
+.dynamic-island:hover {
+  width: 25rem;
+}
+.dynamic-island ul {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+.dynamic-island ul li a{
+  color: rgb(127, 129, 136);
+  transition: 0.2s ease-in-out;
+}
+.dynamic-island ul li a:hover{
+  color: aliceblue;
+}
+.dynamic-island:hover ul {
+  opacity: 1;
+}
+.svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock{
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: rgb(127, 129, 136);
+}
+
+/*name  */
+.name{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.myNam{
+  margin-top: 7.125rem;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  
+}
+.myNam h1{
+/* color: ; */
+-webkit-text-fill-color: transparent;
+background-clip: text;
+background-image: linear-gradient(0deg, rgb(89, 89, 89) 0%, rgb(255, 255, 255) 100%);
+font-size: 2.5rem;
+font-weight: 400;
+}
+.myNam p{
+  color: rgb(127, 129, 136);
+  font-size: 1.2rem;
+}
+
+/* seconpage */
+.secondScreen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 50px;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+.secondScreen h1{
+  color: rgb(127, 129, 136);
+  font-weight: 400;
+}
+.projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.webOne{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(30, 29, 28);  
+  /* box-shadow: 0 0 2rem 0 rgb(30, 29, 28); */
+  border-radius: 3rem;
+  padding: 90px 0px 70px 0px;
+  position: relative;
+  animation: apper  linear;
+  animation-timeline:view();
+  animation-range: entry 0 cover 40%;
+  transition: 1s;
+}
+.webOne:hover{
+  box-shadow: 0 0 2rem 0 rgb(98, 98, 98);
+}
+.webOne h2{
+  color: rgb(127, 129, 136);
+  position: absolute;
+  top: 25px;
+  left: 100px;
+  background-color: rgb(30, 29, 28); 
+  font-size: 1.5rem; 
+  font-weight: 300;
+}
+.webOne p{
+  color: rgb(127, 129, 136);
+background-color: rgb(30, 29, 28);
+font-size: 1.2rem;
+margin-top: 20px;
+font-weight: 300;
+}
+.webOne, h3{
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+background-color: rgb(30, 29, 28);
+font-weight: 500;
+
+}
+.projectItself{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+  background-color: rgb(30, 29, 28);
+}
+.projectItself img{
+  width: 40%;
+  height: 30vh;
+}
+.text{
+background-color: rgb(30, 29, 28);
+width: 40%;
+}
+@keyframes apper{
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+ul{
+  list-style: none;
+}
+
+
+/* bottom */
+.bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px;
+  background-color: rgb(0, 0, 0);
+
+}
+.bottom h2{
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: rgb(0, 0, 0);  
+  font-size: 2rem;
+}
+.links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap ;
+  gap: 30em;
+  background-color: rgb(0, 0, 0);
+}
+.link{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  background-color: rgb(0, 0, 0);
+}
+.link h4{
+  background-color: rgb(0, 0, 0);  
+color: rgb(127, 129, 136);
+font-weight: 200;
+}
+.link ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgb(0, 0, 0);
+  
+}
+.link ul li{
+  background-color: rgb(0, 0, 0);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.link ul li a{
+color: rgb(127, 129, 136);
+font-weight: bold;
+background-color: rgb(0, 0, 0);
+}
+.link ul li img{
+  width: 20px;
+  height: 20px;
+  background: #000; 
+}
+
+
+/* ABOUT  */
+.mainPage{
+  display: flex;
+  gap: 3rem;
+  padding: 100px;
+}
+.about{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(40, 40, 40);
+  padding: 50px;
+  border-radius: 20px;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+.about h1{
+  background-color: rgb(40, 40, 40);
+  font-weight: 300;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+.goals{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(40, 40, 40);
+}
+.about h2{
+  margin-top: 20px;
+  background-color: rgb(40, 40, 40);
+  color: rgb(127, 129, 136);
+  font-weight: 200;
+  font-size: 15px;
+}
+.about p{
+  background-color: rgb(40, 40, 40);
+  color: rgb(127, 129, 136);
+  font-weight: 200;
+  line-height: 30px;
+  font-size: 20px;
+}
+.about p a{
+  background-color: rgb(40, 40, 40);
+  color: rgb(255, 255, 255);
+}
+.imges{
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.imges img{
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: rgba(60, 81, 134, 0.6)
+}
+.recent{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  background-color: rgb(40, 40, 40);
+  padding: 50px;
+  border-radius: 30px;
+}
+.recent h1{
+  font-size: 15px;
+  font-weight: 200;
+  background-color: rgb(40, 40, 40);
+  color: rgb(127, 129, 136);
+}
+.experance{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  background-color: rgb(40, 40, 40);
+  gap: 25rem;
+
+}
+.experance p{
+  background-color: rgb(40, 40, 40);
+  font-size: 1.5rem;
+  color: rgb(206, 206, 206);
+}
+.experance span{
+  align-self: center;
+  margin-left: 20rem;
+  background-color: rgb(40, 40, 40);
+  font-size: 1.5rem;
+  color: rgb(127, 129, 136);
+}
+.experance img{
+  width: 60px;
+  height: 50px;
+  border-radius: 20px;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  background-color: rgb(40, 40, 40);
+}
+
+
+
+/* PLAY  */
+form{
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+form input{
+width: 500px;
+height: 30px;
+outline: none;
+border: none;
+border-bottom: 1px solid rgb(127, 129, 136);
+padding: 5px;
+font-size: 20px;
+font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+color: rgb(127, 129, 136);
+
+}
+form textarea{
+width: 400px;
+height: 200px;
+outline: none;
+padding: 10px;
+}
+form button{
+width: 150px;
+height: 60px;
+outline: none;
+background-image: linear-gradient(0deg, rgb(89, 89, 89) 0%, rgb(164, 164, 164) 100%);
+font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+font-size: 20px; 
+padding: 10px;
+border: none;
+border-radius: 15px;
+}
+form button:active{
+  background: #858383;
+}
+.responsive{
+  display: none;
+}
+@media (max-width: 1000px) {
+  .responsive{
+    display: block;
+  }
+  .responsive h1{
+    font-size: 1.5em;
+  }
+  .responsive a {
+  color: rgb(127, 129, 136);
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-weight: 400;
+}
+  .menu{
+    display: none;
+  }
+  .bottom{
+    display: none;
+  }
+  .secondScreen{
+    display: none;
+  }
+  .name{
+    display: none;
+  }
+.mainPage{
+  display: none;
+}
+
+}
